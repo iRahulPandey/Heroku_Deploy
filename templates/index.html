@@ -1,35 +1,78 @@
 <!DOCTYPE html>
-<html >
-<!--From https://codepen.io/frytyler/pen/EGdtg-->
-<head>
-  <meta charset="UTF-8">
-  <title>ML API</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  
-</head>
+<html>
+  <!--From https://codepen.io/frytyler/pen/EGdtg-->
+  <head>
+    <title>ML Model | Salary Prediction</title>
+    <meta
+      name="description"
+      content="This is a simple demonstration of ML deployment"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow" />
 
-<body>
- <div class="login">
-	<h1>Predict Salary Analysis</h1>
+    <title>Salary Prediction Model using Linear Regression</title>
+  </head>
 
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="experience" placeholder="Experience" required="required" />
-        <input type="text" name="test_score" placeholder="Test Score" required="required" />
-		<input type="text" name="interview_score" placeholder="Interview Score" required="required" />
+  <body>
+    <section class="hero" align="center">
+      <h2
+        style="
+          background-color: rgb(0, 24, 27);
+          color: white;
+          padding: 0;
+          margin: 0;
+        "
+      >
+        ML model prediction
+      </h2>
+      <h3 style="background-color: powderblue; padding: 0; margin: 0">
+        This model is based on Linear regression <br />
+        Input features: Years of Experience, Test Score, Interview Score
+      </h3>
+      <form
+        action="{{ url_for('predict')}}"
+        method="post"
+        class="form"
+        style="
+          background-color: rgb(228, 228, 228);
+          color: white;
+          padding: 10;
+          margin: 10;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <input
+          type="text"
+          name="experience"
+          placeholder="Experience"
+          required="required"
+        />
+        <input
+          type="text"
+          name="test_score"
+          placeholder="Test Score"
+          required="required"
+        />
+        <input
+          type="text"
+          name="interview_score"
+          placeholder="Interview Score"
+          required="required"
+        />
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-    </form>
-
-   <br>
-   <br>
-   {{ prediction_text }}
-
- </div>
-
-
-</body>
+        <button type="submit" class="btn btn-primary btn-block btn-large">
+          Predict
+        </button>
+      </form>
+      <h3 style="background-color: powderblue; padding: 0; margin: 0">
+        {{ prediction_text }}
+      </h3>
+    </section>
+  </body>
 </html>
