@@ -37,34 +37,61 @@
         class="form"
         style="
           background-color: rgb(228, 228, 228);
-          color: white;
+          color: rgb(0, 0, 0);
           padding: 10;
           margin: 10;
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           flex-wrap: wrap;
           align-items: center;
           justify-content: center;
         "
       >
-        <input
-          type="text"
-          name="experience"
-          placeholder="Experience"
-          required="required"
-        />
-        <input
-          type="text"
-          name="test_score"
-          placeholder="Test Score"
-          required="required"
-        />
-        <input
-          type="text"
-          name="interview_score"
-          placeholder="Interview Score"
-          required="required"
-        />
+        <label for="experience">Experience:</label>
+        <select name="experience_ddn" id="exp">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="20">10+</option>
+        </select>
+
+        <label for="test_score">Test Score:</label>
+        <select name="test_score_ddn" id="test_scr">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+
+        <label for="interview_score">Interview Score:</label>
+        <select name="interview_score_ddn" id="interview_scr">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
 
         <button type="submit" class="btn btn-primary btn-block btn-large">
           Predict
